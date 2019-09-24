@@ -5,7 +5,7 @@ const path = require('path'); // path lets us navigate the file system
 
 // heroku assigns a port when it deploys via the process
 //locally this will run @ port 3000; remotely it'll run whenever heroku tells it to run
-const port = 3000; // this || means double pipe
+const port = process.env.PORT || 3000; // this || means double pipe
 
 const app = express();
 app.use(express.static('public'));
